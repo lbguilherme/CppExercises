@@ -23,8 +23,8 @@ Files are named as: `exercisenumber-difficulty-name-comment.cpp`.
 
 ## Difficulty table
 
-Value  | Meaning
-- | -
+Value | Meaning
+----- | -------
 0 | Trivial. Requires zero thinking.
 1 | Basic. Uses only basic knowledge.
 2 | Uses at least one non-basic method.
