@@ -17,22 +17,14 @@
 Files are named as: `exercisenumber-difficulty-name-comment.cpp`.
 
  - `exercisenumber`: A increasing number just as id.
- - `difficulty`: An integer between 0 and 10.
+ - `difficulty`: A set of five integers separated by commas. See next session.
  - `name`: An arbitrary name. Exercises with the same name **must be done in order**.
  - `comment`: Just a comment to differ from exercises with the same name.
 
 ## Difficulty table
 
-Value | Meaning
------ | -------
-0 | Trivial. Requires zero thinking.
-1 | Basic. Uses only basic knowledge.
-2 | Uses at least one non-basic method.
-3 | Uses a combination of non-basic methods.
-4 | TODO
-5 | Requires specific memory layout knowledge.
-6 | Requires non-basic compile-time code.
-7 | Requires heavy use of templates.
-8 | Requires using some non-obvious tricks to solve.
-9 | Requires uses beyond what the language was designed for.
-10 | I almost couldn't solve.
+Value | Interfaces | StdLib | Optimization | Algorithm | MetaProgramming
+----- | ---------- | ------ | ------------ | --------- | ----------------
+0 | Trivial | Nothing | Anything will do | Just logic | Nothing
+1 | Some connection between classes | Usage of common things | Just don't do bad things | Very easy algorithms | Has templates
+2 | TODO | TODO | TODO | TODO | TODO
