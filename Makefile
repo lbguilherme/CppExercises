@@ -6,7 +6,12 @@ all: $(patsubst %.cpp,bin/%,$(wildcard *.cpp))
 		./$$file; \
 	done) | cat
 	
-%: $(filter $@%,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
+e%: $(filter $@%,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
+	@(for file in $^; do \
+		./$$file; \
+	done) | cat
+	
+a%: $(filter $@%-answer,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
 	@(for file in $^; do \
 		./$$file; \
 	done) | cat
