@@ -1,25 +1,20 @@
 CXX := g++ -std=c++1y -Wall -Wextra -Werror -Og -g -fsanitize=undefined -fsanitize=address
 HEADERS = $(wildcard .hpp)
 
-all: $(patsubst %.cpp,bin/%,$(wildcard *.cpp))
-	@(for file in $^; do \
-		./$$file; \
-	done) | cat
-	
-e%: $(filter $@%,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
-	@(for file in $^; do \
-		./$$file; \
-	done) | cat
-	
-a%: $(filter $@%-answer,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
-	@(for file in $^; do \
-		./$$file; \
-	done) | cat
+all:
+	@:
 
-test: $(filter %-answer,$(patsubst %.cpp,bin/%,$(wildcard *.cpp)))
-	@(for file in $^; do \
-		./$$file; \
-	done) | cat
+test:
+	@$(MAKE) -s $(addprefix run-,$(filter %-answer,$(patsubst %.cpp,%,$(wildcard *.cpp))))
+
+run-%: bin/%
+	@$< | cat
+
+e%:
+	@$(MAKE) -s $(addprefix run-,$(filter-out %-answer,$(filter $(subst e,,$@)%,$(patsubst %.cpp,%,$(wildcard *.cpp)))))
+
+a%:
+	@$(MAKE) -s $(addprefix run-,$(filter %-answer,$(filter $(subst a,,$@)%,$(patsubst %.cpp,%,$(wildcard *.cpp)))))
 
 bin/%: %.cpp Makefile $(HEADERS)
 	@mkdir -p bin

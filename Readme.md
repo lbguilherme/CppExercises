@@ -8,7 +8,6 @@
 
 ## Running Makefile
 
-- `make`: Compiles and runs ALL exercises in order. Please note that most will fail to compile.
 - `make e004`: Compiles and runs exercise 004. Replace by any other number. This is the best method.
 - `make clean`: Just clean all executables. Not really needed for anything.
 
