@@ -7,6 +7,7 @@ template <typename T>
 class LinkedListNode {
 	T _value;
 	LinkedListNode<T>* _next = nullptr;
+	LinkedListNode<T>* _prev = nullptr;
 public:
 
 	// YOUR CODE HERE
