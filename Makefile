@@ -5,7 +5,7 @@ all:
 	@:
 
 test:
-	@$(MAKE) -s $(addprefix run-,$(filter %-answer,$(patsubst %.cpp,%,$(wildcard *.cpp))))
+	@$(MAKE) -s $(sort $(addprefix run-,$(filter %-answer,$(patsubst %.cpp,%,$(wildcard *.cpp)))))
 
 run-%: bin/%
 	@$< | cat
