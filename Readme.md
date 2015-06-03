@@ -26,4 +26,7 @@ Value | Interfaces | StdLib | Optimization | Algorithm | MetaProgramming
 ----- | ---------- | ------ | ------------ | --------- | ----------------
 0 | Trivial | Nothing | Anything will do | Just logic | Nothing
 1 | Some connection between classes | Usage of common things | Just don't do bad things | Very easy algorithms | Has templates
-2 | TODO | TODO | TODO | TODO | TODO
+2 | More complex relationships | Combination of several parts of the library | The obivous way may not work | May need to think | Has meta types
+3 | TODO | TODO | TODO | TODO | TODO
+4 | TODO | TODO | TODO | TODO | TODO
+5 | TODO | TODO | TODO | TODO | TODO
