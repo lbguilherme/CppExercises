@@ -1,8 +1,10 @@
-CXX := g++ -std=c++1y -Wall -Wextra -Werror -Og -g -fsanitize=undefined -fsanitize=address
+CXX := clang++ -std=c++1y -Wall -Wextra -Werror -O3 -g -fsanitize=undefined -fsanitize=address
 HEADERS = $(wildcard .hpp)
 
 all:
 	@:
+	
+.SECONDARY:
 
 test:
 	@$(MAKE) -s $(sort $(addprefix run-,$(filter %-answer,$(patsubst %.cpp,%,$(wildcard *.cpp)))))
